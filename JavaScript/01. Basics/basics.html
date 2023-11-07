@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title> JavaScript | Basics</title>
+    <meta charset="utf-8" />
+    <title>JavaScript | Basics</title>
   </head>
+  <style>
+    #blue-btn,
+    #reset-btn {
+      background-color: blue;
+      color: #fff;
+      padding: 5px 20px;
+      border-radius: 10px;
+      border: none;
+    }
+    #reset-btn {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid gray;
+    }
+  </style>
   <body>
-
-  <!-- Start JavaScript Here -->
-  <script type="text/javascript" src="basics.js">
-
-  </script>
+    <div  id="InputMe"></div>
+    <button onclick="ClickMe()">Counter</button>
+    <button id="blue-btn" onclick="chnageColor()">BLUE</button>
+    <button id="reset-btn" onclick="resetColor()">RESET</button>
+    <button id="reset-btn" onclick="loopIncreaseFont()">CLICK ON ME TO INCREASE FONT SIZE</button>
+    <!-- Start JavaScript Here -->
+    <script type="text/javascript" src="basics.js"></script>
   </body>
 </html>
