@@ -56,12 +56,48 @@ function colorChange(buttonElement){
     }
 }
 
+function sentTextToResult(){
+    var valueFromTxt = document.getElementById('text-01').value;
+
+    document.getElementById('result').innerHTML = valueFromTxt;
+}
+function sentRealTimeText(){
+   var valueT1 = document.getElementById('real-time-text').value;
+    document.getElementById('result').innerHTML = valueT1;
+}
+
 
 function addMore(){
     var addRadio = '<tr> <td> Blue Technolgy </td> <td> KIMSENG </td><td> Cambodia </td> </tr>';
     var myTable = '<fieldset> <legend> KIMSENG </legend> <input type="radio"> </input> '+addRadio;
     document.getElementById('seng').innerHTML +=addRadio; 
     // document.write(rs);
-
     
+}
+
+function selectValueLight(){
+    var radioButtons = document.getElementById('Light').value;
+        console.log(radioButtons);
+    document.body.style.backgroundColor = "White";
+    document.getElementsByTagName('legend')[0].style.color = "Black";
+    var documentT = document.getElementsByClassName('template-tool');
+
+    for(var i=0;i<documentT.length; i++){
+        documentT[i].style.backgroundColor = "grey";
+    }
+        
+}
+function selectValueDark(){
+    var radioButtons = document.getElementById('Dark').value;
+        console.log(radioButtons);
+
+    document.body.style.backgroundColor = "Black";
+    document.getElementsByTagName('legend')[0].style.color = "White";
+   var documentT = document.getElementsByClassName('template-tool');
+
+    for(var i=0;i<documentT.length; i++){
+        documentT[i].style.backgroundColor = "red";
+    }
+
+
 }

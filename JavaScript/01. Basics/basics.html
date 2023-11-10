@@ -57,7 +57,7 @@
       grid-template-columns: repeat(3, 100px);
       margin: 10px;
     }
-    #template-tool{
+    .template-tool{
       border-radius: 10px;
       padding: 10px 10px;
       justify-content: center;
@@ -97,7 +97,7 @@
       </div>
     </fieldset>
 
-    <div id="template-tool">
+    <div class="template-tool">
       <input onclick="increaseFont()" type="button" value="Increase Font">
       <input onclick="decreaseFont()" type="button" value="Decrease Font">
       <input onclick="resetFont()" type="button" value="Reset Font Size">
@@ -118,25 +118,25 @@
     </div>
 
 
-    <div id="template-tool">
+    <div class="template-tool">
       <label for="">YOUR TEXT</label> <br>
-      <input type="text" name="" id="">
-      <input type="submit" value="SEND">
+      <input type="text" name="" id="text-01">
+      <input onclick="sentTextToResult()" type="submit" value="SEND">
     </div>
 
-    <div id="template-tool">
+    <div class="template-tool">
       <label for="">YOUR TEXT ( <span>Real Time Update</span> )</label> <br>
-      <input type="text" name="" id="">
+      <input oninput="sentRealTimeText()" type="text" name="" id="real-time-text">
     </div>
     <br>
-    <div id="template-tool">
+    <div class="template-tool">
       <label id="theme-mode" for="">THEME MODE</label> <br>
-      <form>
+      <form >
         <label class="radio-inline">
-          <input type="radio" name="optradio" checked>Khmer
+          <input onclick="selectValueLight()" id="Light" type="radio" name="optradio" checked>Light
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">English
+          <input onclick="selectValueDark()" id="Dark" type="radio" name="optradio">Dark
         </label>
       </form>
     </div>
