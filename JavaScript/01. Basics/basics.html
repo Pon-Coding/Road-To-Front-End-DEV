@@ -5,27 +5,156 @@
     <title>JavaScript | Basics</title>
   </head>
   <style>
-    #blue-btn,
-    #reset-btn {
-      background-color: blue;
-      color: #fff;
-      padding: 5px 20px;
+    /* Style Here */
+
+    #Text{
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+      background-color: aquamarine;
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 100px;
       border-radius: 10px;
-      border: none;
     }
-    #reset-btn {
-      background-color: #fff;
-      color: #000;
-      border: 1px solid gray;
+    #result{
+      font-size: 18px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      color: red;
+      padding: 0px 0px 10px 0px;
     }
+    input{
+      padding: 10px 15px;
+      background-color: burlywood;
+      border: 1px solid aqua;
+      border-radius: 10px;
+      color: black;
+      transition: 0.2s;
+      font-size: 15px;
+      margin: 5px;
+
+    }
+
+    input:hover{
+      transition: 0.2s;
+      transform: scale(103%);
+      background-color: aqua;
+      color: black;
+      border: 1px solid burlywood;
+      border-radius: 10px 5px 10px 5px;
+
+    }
+    #color-tool{
+      border-radius: 10px;
+      padding: 10px 0;
+      justify-content: center;
+      background: grey;
+      width: 320px;
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: repeat(3, 100px);
+      margin: 10px;
+    }
+    #template-tool{
+      border-radius: 10px;
+      padding: 10px 10px;
+      justify-content: center;
+      background: grey;
+      display: inline-block;
+      margin: 10px;
+
+    }
+    label{
+      color: white;
+      font-size: 15px;
+      margin: 10px 10px;
+    }
+    span{
+      color: yellow;
+    }
+    #theme-mode{
+      display: inline-block;
+        background: dodgerblue;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    table,th,tr,td{
+      border: 1px solid grey;
+      padding: 10px 20px;
+
+    }
+    
   </style>
   <body>
-    <div  id="InputMe"></div>
-    <button onclick="ClickMe()">Counter</button>
-    <button id="blue-btn" onclick="chnageColor()">BLUE</button>
-    <button id="reset-btn" onclick="resetColor()">RESET</button>
-    <button id="reset-btn" onclick="loopIncreaseFont()">CLICK ON ME TO INCREASE FONT SIZE</button>
-    <!-- Start JavaScript Here -->
-    <script type="text/javascript" src="basics.js"></script>
+
+    <fieldset id="Text">
+      <legend>Result</legend>
+      <div id="result">
+        None
+      </div>
+    </fieldset>
+
+    <div id="template-tool">
+      <input onclick="increaseFont()" type="button" value="Increase Font">
+      <input onclick="decreaseFont()" type="button" value="Decrease Font">
+      <input onclick="resetFont()" type="button" value="Reset Font Size">
+    </div>
+    
+
+  
+    <div id="color-tool">
+      <input onclick="colorChange(this)" id="color-btn1" type="button" value="Color-1">
+      <input onclick="colorChange(this)" id="color-btn2" type="button" value="Color-2">
+      <input onclick="colorChange(this)" id="color-btn3" type="button" value="Color-3">
+      <input onclick="colorChange(this)" id="color-btn4" type="button" value="Color-4">
+      <input onclick="colorChange(this)" id="color-btn5" type="button" value="Color-5">
+      <input onclick="colorChange(this)" id="color-btn6" type="button" value="Color-6">
+      <input onclick="colorChange(this)" id="color-btn7" type="button" value="Color-7">
+      <input onclick="colorChange(this)" id="color-btn8" type="button" value="Color-8">
+      <input onclick="colorChange(this)" id="color-btn9" type="button" value="Color-9">
+    </div>
+
+
+    <div id="template-tool">
+      <label for="">YOUR TEXT</label> <br>
+      <input type="text" name="" id="">
+      <input type="submit" value="SEND">
+    </div>
+
+    <div id="template-tool">
+      <label for="">YOUR TEXT ( <span>Real Time Update</span> )</label> <br>
+      <input type="text" name="" id="">
+    </div>
+    <br>
+    <div id="template-tool">
+      <label id="theme-mode" for="">THEME MODE</label> <br>
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked>Khmer
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">English
+        </label>
+      </form>
+    </div>
+    <input onclick="addMore()" type="button" value="ADD-MORE">
+
+    <fieldset >
+      <legend>KIMSENG CODING</legend>
+      <table id="seng">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        
+      </table>
+    </fieldset>
+
+
   </body>
+  <script src="basics.js"></script>
 </html>
