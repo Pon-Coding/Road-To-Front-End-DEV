@@ -99,5 +99,115 @@ function selectValueDark(){
         documentT[i].style.backgroundColor = "red";
     }
 
-
 }
+//Object
+var car = {
+    Ronaldo : "Cry",
+    Messi : "Won The World Cup"
+}
+// console.log(car.Ronaldo);
+
+
+//String methods
+
+var str = "ROPON POV";
+
+var pos = str.indexOf("N");
+var search = str.search("P");
+var slice = str.slice(0,5);
+// console.log(slice);
+
+
+//Number Methods
+var pi = 3.14;
+var value1 = 3;
+
+// console.log(pi.toFixed(1));
+
+//=> Arrays Methods
+var books = ["Book-1","Book-2","Book-3"];
+var emptyStr = "";
+
+for(var i=0; i<books.length; i++){
+    emptyStr+=books[i] + "\t";
+}
+books.pop();
+books.push("Book-6");
+books.push("Book-4");
+books.push("Book-5");
+books.sort();
+books.reverse();
+// console.log(books);
+
+
+//Date Method
+var date = new Date();
+
+// console.log(date);
+
+
+function enterYourGoat(){
+    var goatName = document.getElementById('goat').value;
+    var getYourGoat = document.getElementById('yourGoat');
+    switch(goatName){
+        case "MESSI":
+            getYourGoat.style.color = "green";
+
+            getYourGoat.innerHTML = "Won The World Cup 2022";
+            break;
+        case "RONALDO":
+            getYourGoat.style.color = "blue";
+
+            getYourGoat.innerHTML = "Cry More Bro ): ";
+            break;
+        default:
+            if(goatName == "" || goatName == null || goatName == NaN){
+                window.alert("Please Input Something In The Text Field !!! ");
+            } else {
+                getYourGoat.style.color = "red";
+                getYourGoat.innerHTML = "Error 404";
+    
+                window.alert("You input was not found. \n Please try something new instead of "+goatName);
+            }
+           
+    }
+}
+
+
+//Bitwise Operator
+// &              AND
+// |              OR
+// ^              XOR
+// ~              NOT
+// <<             Zero fill left shift
+// >>             Signed right shift
+// >>>            Zero fill right shift
+
+
+
+// => Class In Java-Script
+class Student{
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+}
+std = new Student(1,"Ropon");
+
+
+
+
+//JSON 
+//stand for -> Javascript Object Notation
+
+// [
+//     "status code" : 200,
+//     "date" : [
+//         {
+//             "Name" : "Ropon",
+//             "Age" : 20,
+//         }
+//     ]
+    
+// ]
+
