@@ -4,9 +4,37 @@
     <meta charset="utf-8">
     <title> JavaScript | HTML DOM</title>
   </head>
+  <style>
+    #container{
+      width: 350px;
+      height: 350px;
+      position: relative;
+      background: pink;
+    }
+    #animate{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: yellow;
+    }
+  </style>
   <body>
 
   <!-- Start JavaScript Here -->
+  <img id="image" src="" alt="" width="100px">
+
+  <h4 id="h4-text"></h4>
+
+  <div id="container">
+    <div id="animate"></div>
+  </div>
+
+  <input onclick="myMove()" type="button" value="Animate">
+
+  <input type="button" value="click-me-now" id="click-event">
+
+  <p id="myText">HELLO BLUE</p>
+
   <script type="text/javascript" src="htmldom.js">
 
   </script>
